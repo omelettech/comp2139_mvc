@@ -4,8 +4,8 @@ namespace comp2139_mvc.Models
     public class Project
     {
         [Required] //constraints
-        public int ProjId { get; set; }
-        public required string ProjName { get; set; } //default value = "NewProj"
+        public int ProjectId { get; set; }
+        public required string ProjectName { get; set; } //default value = "NewProj"
         public string? Description { get; set; }
 
         [DataType(DataType.Date)]
