@@ -4,8 +4,8 @@ namespace comp2139_mvc.Models
     public class Project
     {
         [Required] //constraints
-        public int ProjId { get; set; }
-        public required string ProjName { get; set; } //default value = "NewProj"
+        public int ProjectId { get; set; }
+        public required string ProjectName { get; set; } //default value = "NewProject"
         public string? Description { get; set; }
 
         [DataType(DataType.Date)]
@@ -18,7 +18,8 @@ namespace comp2139_mvc.Models
 
         public Project()
         {
-
+            ProjectName="New_Project"+ProjectId.ToString();
+            Status = "Not_started";
         }
     }
 }
