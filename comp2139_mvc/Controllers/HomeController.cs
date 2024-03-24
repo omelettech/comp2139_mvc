@@ -22,7 +22,36 @@ namespace comp2139_mvc.Controllers
         {
             return View();
         }
+        [HttpGet]
+        public IActionResult GeneralSearch(string searchType, string searchString)
+        {
+            if (searchType == "Projects")
 
+            {
+                return RedirectToAction("Search", "Project", new { searchString });
+            }
+
+            else if (searchType == "Tasks")
+            {
+               
+                int defaultProjectId = 1;
+                return RedirectToAction("Search", "Task", new { projectId = defaultProjectId, searchString });
+            }
+            return View("Index", "Project");
+        }
+        public IActionResult NotFound(int statusCode)
+        {
+            if (statusCode == 404)
+            {
+                return View("NotFound");
+            }
+            else
+            {
+                return View("Error");
+            }
+        }
+
+       
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

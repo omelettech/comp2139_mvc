@@ -1,0 +1,42 @@
+﻿@using comp2139_mvc.Areas.ProjectManagement.Models
+
+@model Project
+
+@{}
+
+<form method="post" asp-action="Create">
+   <div class="form-group">
+        @Html.LabelFor(model => model.ProjectName)
+        @Html.TextBoxFor(model => model.ProjectName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.ProjectName, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Description)
+        @Html.TextBoxFor(model => model.Description, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.CreatedDate)
+        <input type="date" class="form-control" asp-for="CreatedDate" asp-format="{0:yyyy-MM-ddTHH:mm}" />
+        @Html.ValidationMessageFor(model => model.CreatedDate, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.DueTime)
+        <input type="date" class="form-control" asp-for="DueTime" asp-format="{0:yyyy-MM-ddTHH:mm}" />
+        @Html.ValidationMessageFor(model => model.DueTime, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Status)
+        <input type="radio" class="form-control form-check-input" asp-for="Status" checked="true" value="Not started" />
+        <input type="radio" class="form-control form-check-input" asp-for="Status" checked="false" value="Started" />
+        <input type="radio" class="form-control form-check-input" asp-for="Status" checked="false" value="Completed" />
+
+        @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
+    </div>
+
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

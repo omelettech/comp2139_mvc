@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\omele\\source\\repos\\comp2139_mvc\\comp2139_mvc\\wwwroot\\js\\projectComment.js",
+      "PackagePath": "staticwebassets\\js\\projectComment.js"
+    },
+    {
       "Id": "C:\\Users\\omele\\source\\repos\\comp2139_mvc\\comp2139_mvc\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

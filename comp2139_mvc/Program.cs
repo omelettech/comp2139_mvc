@@ -31,8 +31,17 @@ namespace comp2139_mvc
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
+            app.MapAreaControllerRoute(
+                name: "ProjectManagement",
+                areaName: "ProjectManagement",
+                pattern: "{area:exists}/{controller=Project}/{action=Index}/{id?}");
+            app.MapControllerRoute(
+                name: "comment",
+                pattern: "{controller=ProjectComment}/{action=GetComment}/{id?}");
+
 
             app.Run();
         }
+        
     }
 }

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<ProjectTask> // specifies the collection of project tasks
+@{
+    ViewData["Title"] = "Tasks List";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Task ID</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Project ID</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var task in Model)
+        {
+            <tr>
+                <td>@task.TaskId</td>
+                <td>@task.TaskName</td>
+                <td>@task.TaskDescription</td>
+                <td>@task.projectId</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@task.TaskId" class="btn btn-info">Details</a>
+                    <a asp-action="Edit" asp-route-id="@task.TaskId" class="btn btn-secondary">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@task.TaskId" class="btn btn-danger">Delete</a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!--Button to Create a New Task-->
+<a asp-action="Create" asp-route-projectId="@ViewBag.ProjectId" class="btn btn-primary">Create New Task</a>
+
+<!--Button to Back to Projects-->
+<a asp-controler="Projects" asp-action="Index" class="btn btn-secondary">Back To Projects</a>
+
+                  

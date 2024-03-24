@@ -1,0 +1,64 @@
+﻿@using comp2139_mvc.Areas.ProjectManagement.Models
+
+@model List<Project> // indicates that the view accepts a list of projects
+
+
+@{
+	ViewData["Title"] = "Projects";
+	bool searchPerformed = ViewData["SearchPerformed"] as bool? ?? false;
+	string searchString = ViewData["SearchString"] as string;
+}
+
+
+<h2>Projects</h2>
+
+@if(Model.Any()){
+
+	<table class="table">
+		<thead>
+			<tr>
+
+			<th>ID</th>
+			<th>Name</th>
+			<th></th>
+			<th>Status</th>
+
+			</tr>
+		</thead>
+		<tbody>
+			
+		@foreach(var project in Model)
+			{
+				<tr>
+					<td>
+						<a class="nav-link text-dark" asp-action="Details" asp-route-id="@project.ProjectId"><i class="fa-solid fa-list-check"></i>@project.ProjectId</a>
+					</td>
+					<td>
+						<a class="nav-link text-dark" asp-action="Details" asp-route-id="@project.ProjectId"><i class="fa-solid fa-list-check"></i>@project.ProjectName</a>
+					</td>
+					<td>
+						@Html.ActionLink("Edit","Edit",new {id=project.ProjectId})
+						@Html.ActionLink("Delete", "Delete", new { id = project.ProjectId })
+					</td>
+
+					
+					<td>@project.Status</td>				
+				</tr>
+			}
+			
+		</tbody>
+	</table>
+}
+else{
+	if (searchPerformed)
+	{
+		<p>No Projects name with name "@searchString".</p>
+	}
+	else
+	{
+		<p>No Projects</p>
+	}
+}
+
+<a class="nav-link text-dark" asp-area="ProjectManagement" asp-controller="Project" asp-action="Create">Create</a>
+
