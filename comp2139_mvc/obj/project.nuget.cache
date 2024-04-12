@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "JsIUzrxvO0250bE9IDU8WwwLg6BUjxopb4ZbS0DHJbA8mOryHsbV4BZILbfKsDGwc3zxHsBh8KFOhkoooAkkKQ==",
+  "dgSpecHash": "x3JV5RdyvmRVP6r0B5s5IRn06oAv3UcgDlK9/1F+X4d1q4tPIVf5aJ4vokFoD2oAq+gUmVNhADaIgrjVClEU4g==",
   "success": true,
   "projectFilePath": "C:\\Users\\omele\\source\\repos\\comp2139_mvc\\comp2139_mvc\\comp2139_mvc.csproj",
   "expectedPackageFiles": [
@@ -63,6 +63,9 @@
     "C:\\Users\\omele\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.2\\microsoft.aspnetcore.components.quickgrid.8.0.2.nupkg.sha512",
     "C:\\Users\\omele\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid.entityframeworkadapter\\8.0.2\\microsoft.aspnetcore.components.quickgrid.entityframeworkadapter.8.0.2.nupkg.sha512",
     "C:\\Users\\omele\\.nuget\\packages\\microsoft.aspnetcore.components.web\\8.0.2\\microsoft.aspnetcore.components.web.8.0.2.nupkg.sha512",
+    "C:\\Users\\omele\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.4\\microsoft.aspnetcore.cryptography.internal.8.0.4.nupkg.sha512",
+    "C:\\Users\\omele\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.4\\microsoft.aspnetcore.cryptography.keyderivation.8.0.4.nupkg.sha512",
+    "C:\\Users\\omele\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\8.0.4\\microsoft.aspnetcore.identity.ui.8.0.4.nupkg.sha512",
     "C:\\Users\\omele\\.nuget\\packages\\microsoft.aspnetcore.metadata\\8.0.2\\microsoft.aspnetcore.metadata.8.0.2.nupkg.sha512",
     "C:\\Users\\omele\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.24\\microsoft.aspnetcore.razor.language.6.0.24.nupkg.sha512",
     "C:\\Users\\omele\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
@@ -97,6 +100,10 @@
     "C:\\Users\\omele\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "C:\\Users\\omele\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\omele\\.nuget\\packages\\microsoft.extensions.dependencymodel\\8.0.0\\microsoft.extensions.dependencymodel.8.0.0.nupkg.sha512",
+    "C:\\Users\\omele\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\8.0.0\\microsoft.extensions.fileproviders.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\omele\\.nuget\\packages\\microsoft.extensions.fileproviders.embedded\\8.0.4\\microsoft.extensions.fileproviders.embedded.8.0.4.nupkg.sha512",
+    "C:\\Users\\omele\\.nuget\\packages\\microsoft.extensions.identity.core\\8.0.4\\microsoft.extensions.identity.core.8.0.4.nupkg.sha512",
+    "C:\\Users\\omele\\.nuget\\packages\\microsoft.extensions.identity.stores\\8.0.4\\microsoft.extensions.identity.stores.8.0.4.nupkg.sha512",
     "C:\\Users\\omele\\.nuget\\packages\\microsoft.extensions.logging\\8.0.0\\microsoft.extensions.logging.8.0.0.nupkg.sha512",
     "C:\\Users\\omele\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\omele\\.nuget\\packages\\microsoft.extensions.options\\8.0.2\\microsoft.extensions.options.8.0.2.nupkg.sha512",
