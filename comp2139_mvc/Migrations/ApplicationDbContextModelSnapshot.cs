@@ -17,12 +17,20 @@ namespace comp2139_mvc.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
+<<<<<<< HEAD
                 .HasAnnotation("ProductVersion", "8.0.2")
+=======
+                .HasAnnotation("ProductVersion", "8.0.1")
+>>>>>>> 09bbd9f7b5e1e87e27e0cc734f0076ab72fc8d81
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+<<<<<<< HEAD
             modelBuilder.Entity("comp2139_mvc.Areas.ProjectManagement.Models.Project", b =>
+=======
+            modelBuilder.Entity("comp2139_mvc.Models.Project", b =>
+>>>>>>> 09bbd9f7b5e1e87e27e0cc734f0076ab72fc8d81
                 {
                     b.Property<int>("ProjectId")
                         .ValueGeneratedOnAdd()
@@ -34,12 +42,16 @@ namespace comp2139_mvc.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
+<<<<<<< HEAD
                         .HasMaxLength(5000)
+=======
+>>>>>>> 09bbd9f7b5e1e87e27e0cc734f0076ab72fc8d81
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("DueTime")
                         .HasColumnType("datetime2");
 
+<<<<<<< HEAD
                     b.Property<string>("ProjectName")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -48,11 +60,20 @@ namespace comp2139_mvc.Migrations
                     b.Property<string>("Status")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
+=======
+                    b.Property<string>("ProjName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(max)");
+>>>>>>> 09bbd9f7b5e1e87e27e0cc734f0076ab72fc8d81
 
                     b.HasKey("ProjectId");
 
                     b.ToTable("Projects");
                 });
+<<<<<<< HEAD
 
             modelBuilder.Entity("comp2139_mvc.Areas.ProjectManagement.Models.ProjectComment", b =>
                 {
@@ -119,6 +140,8 @@ namespace comp2139_mvc.Migrations
                 {
                     b.Navigation("Tasks");
                 });
+=======
+>>>>>>> 09bbd9f7b5e1e87e27e0cc734f0076ab72fc8d81
 #pragma warning restore 612, 618
         }
     }

@@ -6,6 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+<<<<<<< HEAD
 
 
   <ItemGroup>
@@ -37,6 +38,15 @@
 
   <ItemGroup>
     <_ContentIncludedByDefault Remove="Areas\ProjectManagement\Views\Project\Details.cshtml" />
+=======
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+>>>>>>> 09bbd9f7b5e1e87e27e0cc734f0076ab72fc8d81
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,41 @@
+﻿@model List<Project> // indicates that the view accepts a list of projects
+
+
+@{
+	ViewData["Title"] = "Projects";
+	//viewData is an associative array for displaying data
+
+
+
+}
+<h2>Projects</h2>
+@if (Model.Any())
+{
+
+	<table class="table">
+		<thead>
+			<tr>
+
+				<th>ID</th>
+				<th>Name</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			
+				@foreach(var project in Model)
+				{
+				<tr>
+				<td>@project.ProjectId</td>
+				<td>@project.ProjectName</td>
+				<td>@project.Description</td>
+				</tr>
+				}
+			
+		</tbody>
+	</table>
+}
+else
+{
+	<p>no projects</p>
+}
