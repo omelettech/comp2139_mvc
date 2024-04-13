@@ -52,6 +52,8 @@ namespace comp2139_mvc.Areas.Identity.Pages.Account
         [BindProperty]
         public InputModel Input { get; set; }
 
+
+
         /// <summary>
         ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
         ///     directly from your code. This API may change or be removed in future releases.
@@ -74,6 +76,15 @@ namespace comp2139_mvc.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
+            /// 
+            [Required]
+            [Display(Name ="Firstname")]
+            public string FirstName { get; set; }
+
+            [Required]
+            [Display(Name = "Lastname")]
+            public string LastName { get; set; }
+
             [Required]
             [EmailAddress]
             [Display(Name = "Email")]
@@ -113,6 +124,8 @@ namespace comp2139_mvc.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
                 var user = CreateUser();
+
+       
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
