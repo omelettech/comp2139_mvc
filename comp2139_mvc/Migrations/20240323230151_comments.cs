@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace comp2139_mvc.Migrations
 {
     /// <inheritdoc />
-    public partial class comments : Migration
+    public partial class Comments : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

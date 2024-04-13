@@ -1,4 +1,5 @@
 using comp2139_mvc.Data;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace comp2139_mvc
@@ -15,6 +16,11 @@ namespace comp2139_mvc
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+            builder.Services.AddAuthorization();
+
+            builder.Services.AddIdentityApiEndpoints<IdentityUser>()
+                .AddEntityFrameworkStores<ApplicationDbContext>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -22,6 +28,9 @@ namespace comp2139_mvc
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            app.MapIdentityApi<IdentityUser>();
+
             app.UseStaticFiles();
 
             app.UseRouting();

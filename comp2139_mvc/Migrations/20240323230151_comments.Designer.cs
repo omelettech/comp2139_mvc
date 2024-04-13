@@ -13,7 +13,7 @@ namespace comp2139_mvc.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20240323230151_comments")]
-    partial class comments
+    partial class Comments
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
