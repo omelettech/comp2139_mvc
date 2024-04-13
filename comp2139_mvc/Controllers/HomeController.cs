@@ -37,7 +37,7 @@ namespace comp2139_mvc.Controllers
                 int defaultProjectId = 1;
                 return RedirectToAction("Search", "Task", new { projectId = defaultProjectId, searchString });
             }
-            return View("Index", "Project");
+            return View("Index", "Home");
         }
         public IActionResult NotFound(int statusCode)
         {
