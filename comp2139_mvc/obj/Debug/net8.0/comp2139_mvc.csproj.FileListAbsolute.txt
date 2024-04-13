@@ -261,3 +261,4 @@ C:\Users\omele\source\repos\comp2139_mvc\comp2139_mvc\bin\Debug\net8.0\runtimes\
 C:\Users\omele\source\repos\comp2139_mvc\comp2139_mvc\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\omele\source\repos\comp2139_mvc\comp2139_mvc\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 C:\Users\omele\source\repos\comp2139_mvc\comp2139_mvc\obj\Debug\net8.0\scopedcss\Areas\ProjectManagement\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\omele\source\repos\comp2139_mvc\comp2139_mvc\obj\Debug\net8.0\comp2139_mvc.MvcApplicationPartsAssemblyInfo.cs

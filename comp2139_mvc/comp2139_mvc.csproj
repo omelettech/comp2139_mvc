@@ -6,24 +6,34 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Areas\ProjectManagement\Data\**" />
+    <Compile Remove="Enum\**" />
+    <Compile Remove="Services\**" />
+    <Content Remove="Areas\ProjectManagement\Data\**" />
+    <Content Remove="Enum\**" />
+    <Content Remove="Services\**" />
+    <EmbeddedResource Remove="Areas\ProjectManagement\Data\**" />
+    <EmbeddedResource Remove="Enum\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <None Remove="Areas\ProjectManagement\Data\**" />
+    <None Remove="Enum\**" />
+    <None Remove="Services\**" />
+  </ItemGroup>
+
 
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter" Version="8.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter" Version="8.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.4" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.4" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.2">
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Areas\ProjectManagement\Data\" />
-    <Folder Include="Enum\" />
-    <Folder Include="Services\" />
   </ItemGroup>
 
   <ItemGroup>
