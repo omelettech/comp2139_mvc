@@ -1,4 +1,5 @@
-﻿using comp2139_mvc.Data;
+﻿using comp2139_mvc.Areas.ProjectManagement.Models;
+using comp2139_mvc.Data;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -7,11 +8,11 @@ namespace comp2139_mvc.Areas.ProjectManagement.Controllers
 {
 	[Area("ProjectManagement")]
 	[Route("[area]/[controller]/[action]")]
-	public class TaskController : Controller
+	public class ProjectTaskController : Controller
 	{
 		private readonly ApplicationDbContext _context;
 
-		public TaskController(ApplicationDbContext context)
+		public ProjectTaskController(ApplicationDbContext context)
 		{
 			_context = context;
 		}
@@ -101,5 +102,31 @@ namespace comp2139_mvc.Areas.ProjectManagement.Controllers
 				return View();
 			}
 		}
-	}
+		[HttpGet]
+        public async Task<IActionResult> GetTasks(int projectId)
+        {
+            var tasks = await _context.Tasks.Where(c => c.projectId == projectId).ToListAsync();
+
+            return Json(tasks);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddTasks([FromBody] ProjectTask task)
+
+        {
+
+            if (ModelState.IsValid)
+            {
+
+                task.TaskName = DateTime.Now.ToString();
+                _context.Tasks.Add(task);
+                await _context.SaveChangesAsync();
+
+                return Json(new { success = true, message = "Comment added successfully" });
+            }
+
+            var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage);
+            return Json(new { success = false, message = "Invalid comment data.", error = errors });
+        }
+    }
 }

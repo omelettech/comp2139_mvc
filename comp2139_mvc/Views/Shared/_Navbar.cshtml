@@ -1,7 +1,6 @@
-﻿
-<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+﻿<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
     <div class="container-fluid">
-        
+
         <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">comp2139_mvc</a>
 
         <form class="d-flex" asp-controller="Home" asp-action="GeneralSearch" method="get">
@@ -11,8 +10,6 @@
                 <option value="Tasks">Tasks</option>
             </select>
             <button class="btn btn-outline-secondary" type="submit">Search</button>
-
-
         </form>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -29,6 +26,14 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-dark" asp-area="ProjectManagement" asp-controller="Project" asp-action="Index"><i class="fa-solid fa-list-check"></i>Projects</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
                 </li>
             </ul>
         </div>

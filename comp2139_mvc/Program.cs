@@ -16,6 +16,8 @@ namespace comp2139_mvc
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
+
             builder.Services.AddAuthorization();
 
             builder.Services.AddIdentityApiEndpoints<IdentityUser>()
@@ -36,11 +38,11 @@ namespace comp2139_mvc
             app.UseRouting();
 
             app.UseAuthorization();
-
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
-            app.MapAreaControllerRoute(
+			
+			app.MapAreaControllerRoute(
                 name: "ProjectManagement",
                 areaName: "ProjectManagement",
                 pattern: "{area:exists}/{controller=Project}/{action=Index}/{id?}");

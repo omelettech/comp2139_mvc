@@ -4,7 +4,7 @@ using comp2139_mvc.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 namespace comp2139_mvc.Data
 {
-    public class ApplicationDbContext : IdentityDbContext<User>
+    public class ApplicationDbContext : IdentityDbContext
     {
        
 		public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }

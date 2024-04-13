@@ -22,6 +22,7 @@ namespace comp2139_mvc.Areas.ProjectManagement.Controllers
         public async Task<IActionResult> Index()
         {
             var projects = await _context.Projects.ToListAsync();
+
             return View(projects);
         }
         [HttpGet("Details/{id:int}")]
